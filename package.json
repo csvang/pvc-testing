@@ -1,0 +1,19 @@
+{
+  "name": "pw-test",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Playwright testing for Programmable Video Conferences.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chue Shee Vang",
+  "license": "ISC",
+  "dependencies": {
+    "@bull-board/express": "^3.10.7",
+    "bull": "^4.8.2",
+    "bullmq": "^1.81.0",
+    "express": "^4.18.0",
+    "playwright": "^1.21.1"
+  }
+}
