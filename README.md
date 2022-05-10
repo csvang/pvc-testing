@@ -1,5 +1,7 @@
 # Playwright - PVC Testing
 
+A test using Playwright to navigate the SignalWire Programmable Video Conferences.  This can be used in a queue environment to load test.
+
 ## Instructions
 - Install packages.
 
