@@ -21,10 +21,10 @@ function pause(ms) {
         //await page.goto(`file:///${process.cwd()}/prebuilt_demo_prejoin.html`);
         await page.goto(`http://localhost:8000/prebuilt_demo_prejoin.html`);
 
-        // await page.pause();
+        await page.pause();
         await page.waitForSelector('#ready-room-root');
         // await page.waitForLoadState()
-        if (await page.$('#ready-room-root > sw-prejoin > div > div > div > h1')) { // Show Prejoin H1
+        if (await page.$('#ready-room-root > div > sw-prejoin > div > div > div.text-center > h1')) { // Show Prejoin H1
             // Camera
             await page.locator('text=SquareCheckboxAllow camera access').click();
             await pause(500);
@@ -47,11 +47,11 @@ function pause(ms) {
             // Audio Selection
             if (await page.$('text=Select your microphone and speakers')) {
                 // audio = true;
-                await page.locator('text=PlayPlay Audio Test').click();
+                await page.locator('text=Test Audio').click();
                 await pause(3000);
 
-                await page.locator('text=StopStop Audio Test').click();
-                await pause(500);
+                // await page.locator('text=StopStop Audio Test').click();
+                // await pause(500);
             }
 
             await page.locator('button:has-text("Join")').click();
